@@ -1,5 +1,8 @@
 # Glitch-FX-Processing-Version
 A Processing version of my Glitch-FX sketch with extra features
+<br><br>
+<img src="test_1.jpg" width="25%" height="25%"> <img src="test_2.jpg" width="25%" height="25%">
+
 <h2>About</h2>
 <p>
   This is a version of my Glitch-FX sketch on Open Processing done fully with original (Java) Processing 3.
