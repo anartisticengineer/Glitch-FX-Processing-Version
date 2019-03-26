@@ -116,4 +116,39 @@ class Filters{
     dest.resize(round(s_copy.width*scaleBy),round(s_copy.height*scaleBy));
     return dest;
   }
+  
+    //HIGH PASS*
+  PImage highPass(PImage src_) {
+    PImage s_copy = src_.copy();
+    PImage dest = s_copy;
+    //working in HSB to adjust brightness values
+    colorMode(HSB);
+    s_copy.loadPixels();
+    dest.loadPixels();
+    //**just to avoid having to constantly type 's_copy.width' for the 'neighbors' variable in the for loop**
+    int w = s_copy.width; 
+    for (int x = 1; x < w-1; x++) {
+      for (int y = 1; y < s_copy.height-1; y++) {
+        int i = x + y*s_copy.width;
+        //neighboring pixel indicies
+        int [] i_n = {i-w-1, i-w, i-w+1, i-1, 1, i+1, i+w-1, i+w, i+w+1};
+        float b = 0;
+        for (int j = 0; j < i_n.length; j++) {
+          if (j == 4) {
+            b += 9*brightness(s_copy.pixels[i_n[j]]);
+          } else {
+            b -= brightness(s_copy.pixels[i_n[j]]);
+          }
+        }
+        //new brightness value for pixel
+        //set the current pixel
+        dest.pixels[i] = color(hue(s_copy.pixels[i]), saturation(s_copy.pixels[i]), constrain(b, 0, 255));
+      }
+    }
+    //high pass filter complete
+    s_copy.updatePixels();
+    dest.updatePixels();
+    colorMode(RGB);
+    return dest;
+  }
 }
