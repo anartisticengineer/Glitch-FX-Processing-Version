@@ -23,7 +23,7 @@ class GlitchFX{
     println("\n" + N + " effects applied:");
     for (int i = 0; i < N; i++){
       //which effect?
-      int fx = int(floor(random(0,7)));
+      int fx = int(floor(random(0,8)));
       PImage next_step = src.copy();
       switch(fx){
         case 0:
@@ -54,6 +54,9 @@ class GlitchFX{
         overwriteSource(glitchFilter.jpgDegrade(next_step));
         print(" JPG DEGRADE");
         break;
+        case 7:
+        overwriteSource(glitchFilter.highPass(next_step));
+        print(" HIGH PASS");
       }
       //end of switch statement
     }
