@@ -55,19 +55,36 @@ void keyPressed(){
     gfx.mosh();
     redraw();
   }
-  else if (key == 's' || key == 'S'){
-    //save image
-    selectOutput("","parseFile");
+  else if (key == 'j' || key == 'J'){
+    //save image as JPG
+    selectOutput("Save as JPG","parseFileJPG");
+  }
+  else if (key == 'p' || key == 'P'){
+    //save image as PNG 
+    selectOutput("Save as PNG","parseFilePNG");
+  }
+  else if (key == 'x' || key == 'X'){
+    exit();
   }
 }
 //function to setup output upon saving.
-void parseFile(File f){
+void parseFileJPG(File f){
   if (f == null){
     println("Window closed or operation cancelled.");
   }
   else{
     println(f.getAbsolutePath());
     save(f.getAbsolutePath()+".jpg");
+  } 
+}
+
+//function to setup output upon saving as PNG.
+void parseFilePNG(File f){
+  if (f == null){
+    println("Window closed or operation cancelled.");
   }
-  
+  else{
+    println(f.getAbsolutePath());
+    save(f.getAbsolutePath()+".png");
+  } 
 }

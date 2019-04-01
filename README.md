@@ -12,7 +12,9 @@ A Processing version of my Glitch-FX sketch with extra features
 <h2>Instructions</h2>
 <ul>
   <li>Press <b>'G'</b> to generate a new effect on the image.</li>
-  <li>Press <b>'S'</b> to save as .jpg (NOTE: when saving just type a file name <b>without</b> the extension)</li>
+  <li>Press <b>'J'</b> to save as .jpg (NOTE: when saving just type a file name <b>without</b> the extension)</li>
+  <li>Press <b>'P'</b> to save as .png (same note as before)</li>
+  <li>Press <b>'X'</b> to exit</li>
 </ul>
 <h2>Effects Included</h2>
 <ul>

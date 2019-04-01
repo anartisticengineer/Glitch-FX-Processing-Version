@@ -11,7 +11,7 @@ class GlitchFX{
     glitchFilter = new Filters();
   }
   
-  void overwriteSource(PImage newSrc_){
+  private void overwriteSource(PImage newSrc_){
     src = newSrc_;
   }
   
