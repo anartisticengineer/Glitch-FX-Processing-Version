@@ -25,8 +25,16 @@ A Processing version of my Glitch-FX sketch with extra features
   <li>Noisy</li>
   <li>Scanner</li>
   <li>Jpg Degrade</li>
+  <li>Invert Saturation</li>
+  <li>OpenCV - Edge Detect</li>
   <li><b>More will be planned in the very near future</b></li>
 </ul>
 <h2>Future Development</h2>
-<p>As of the latest version, any image will only be loaded as a <b>fixed 1000 x 1000px size</b>. I may try to find some method of allowing variable sizes/aspect ratios depending on the input image (with the settings() function), but for now, the size remains fixed.
+<p><strike>As of the latest version, any image will only be loaded as a <b>fixed 1000 x 1000px size</b>. I may try to find some method of allowing variable sizes/aspect ratios depending on the input image (with the settings() function), but for now, the size remains fixed.</strike>
 </p>
+<h2>September 2019 Update</h2>
+<ul>
+<li><b>Different aspect ratios can now be loaded without forcing the source to a 1:1 square!</b> The image will be scaled down but the aspect ratio will remain as is.</li>
+  <li>OpenCV library added for use of the edge detection filters.</li>
+  <li>Invert Saturation filter added.</li>
+</ul>
