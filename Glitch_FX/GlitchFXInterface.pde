@@ -45,8 +45,9 @@ class GlitchFX {
         print(" PIXEL BURN");
         break;
       case 4:
-        overwriteSource(glitchFilter.noisy(next_step));
-        print(" NOISY");
+        //overwriteSource(glitchFilter.noisy(next_step));
+        //print(" NOISY");
+        print(" FX BYPASSED");
         break;
       case 5:
         overwriteSource(glitchFilter.scanner(next_step));
